@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Anime X Stream</string>
+    <string name="discover">Descubre</string>
+    <string name="retry">reintentar</string>
+    <string name="released">Fecha de lanzamiento:</string>
+    <string name="type">Tipo:</string>
+    <string name="status">Estado:</string>
+    <string name="next_episode"><u>Episodio siguiente</u>&gt;</string>
+    <string name="previous_episode">&lt;<u>Episodio anterior</u></string>
+    <string name="back_button">Atras</string>
+    <string name="search">Buscar…</string>
+    <string name="something_went_wrong">Algo salió mal</string>
+    <string name="no_internet">Sin conexión</string>
+    <string name="favourite">Favoritos</string>
+    <string name="status_code_default">Algo salió mal</string>
+    <string name="server_error">Error del servidor</string>
+    <string name="added_to_favourites">Añadido a Favoritos</string>
+    <string name="removed_from_favourites">Eliminado de Favoritos</string>
+    <string name="video_quality">Calidad</string>
+    <string name="see_more"><![CDATA[Ver más >]]></string>
+    <string name="home">Hogar</string>
+    <string name="settings">Ajustes</string>
+    <string name="little_disc">Una aplicación de transmisión sencilla pero potente</string>
+    <string name="large_disc" tools:ignore="Typos">Esta aplicación obtiene todo su contenido de GoGoAnime.
+ Por lo tanto, cualquier cambio importante en este sitio puede causar la
+ la aplicación deje de funcionar, pero probaremos nuestra
+ lo mejor es hacer que esta aplicación se ejecute</string>
+    <string name="night_mode">Modo nocturno</string>
+    <string name="switch_between_light_dark_theme"><![CDATA[Cambiar entre tema claro y oscuro]]></string>
+    <string name="picture_in_picture">Imagen en imagen</string>
+    <string name="toggle_pip_mode">Alternar modo PIP</string>
+    <string name="Google_Server">Servidor de Google</string>
+    <string name="Toogle_Google_Server">¡Solo 1080p! Velocidades más rápidas</string>
+</resources>

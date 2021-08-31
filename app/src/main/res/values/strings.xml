@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Anime X Stream</string>
+    <string name="discover">Browse</string>
+    <string name="retry">retry</string>
+    <string name="quality_auto" translatable="false">Auto</string>
+    <string name="speed" translatable="false">1x</string>
+    <string name="released">Released:</string>
+    <string name="type">Type:</string>
+    <string name="status">Status:</string>
+    <string name="next_episode"><u>Next Episode</u>&gt;</string>
+    <string name="previous_episode">&lt;<u>Previous Episode</u></string>
+    <string name="back_button">Back Button</string>
+    <string name="search">Search</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+
+    <string name="no_internet">No Internet Connection</string>
+    <string name="favourite">Favourites</string>
+    <string name="status_code_default">Something went Wrong</string>
+    <string name="server_error">Server Error</string>
+    <string name="added_to_favourites">Anime added to Favourites</string>
+    <string name="removed_from_favourites">Anime removed from Favourites</string>
+    <string name="see_more"><![CDATA[See more >]]></string>
+    <string name="video_quality">Video Quality</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="little_disc">A simple yet, Powerful Streaming app</string>
+    <string name="large_disc">This app gets all it\'s content from GoGoAnime.
+ Therefore any heavy changes on this site might cause the
+ app to stop working, But we will try our
+ best to get this app running</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="switch_between_light_dark_theme"><![CDATA[Switch Between Light & Dark Theme]]></string>
+    <string name="picture_in_picture">Picture in Picture</string>
+    <string name="toggle_pip_mode">Toggle PIP Mode</string>
+    <string name="Google_Server">Google Server</string>
+    <string name="Toogle_Google_Server">1080p only! Faster Speeds</string>
+
+</resources>
