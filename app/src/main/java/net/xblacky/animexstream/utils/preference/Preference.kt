@@ -40,13 +40,12 @@ class Preference(private val context: Context) {
     }
 
     fun getGoogleServer():Boolean {
-        return  sharedPreferences.getBoolean(GOOGLESERVER, C.GOOGLESERVER)
+        return  sharedPreferences.getBoolean(GOOGLESERVER, false)
     }
 
     fun setGoogleServer(gogo: Boolean){
         val editor = sharedPreferences.edit()
         editor.putBoolean(GOOGLESERVER, gogo)
-        C.GOOGLESERVER = gogo
         editor.apply()
     }
     fun getBaseUrl(): String {

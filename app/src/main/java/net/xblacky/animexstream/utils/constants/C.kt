@@ -56,9 +56,6 @@ class C {
         const val ORIGIN = "https://gogoanime.pe/"
         const val  REFERER = "https://gogoanime.pe/"
 
-        //Google Server
-        var GOOGLESERVER = false
-
         //Realm
         const val MAX_TIME_M3U8_URL = 2 * 60 * 60 *1000
         const val MAX_TIME_FOR_ANIME = 2 * 24 * 60 *60 * 1000

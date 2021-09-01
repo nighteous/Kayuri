@@ -8,8 +8,8 @@ import net.xblacky.animexstream.utils.CommonViewModel
 import net.xblacky.animexstream.utils.constants.C
 import net.xblacky.animexstream.utils.model.Content
 import net.xblacky.animexstream.utils.parser.HtmlParser
+import net.xblacky.animexstream.utils.preference.PreferenceHelper
 import okhttp3.ResponseBody
-import timber.log.Timber
 
 class VideoPlayerViewModel : CommonViewModel() {
 
@@ -66,9 +66,8 @@ class VideoPlayerViewModel : CommonViewModel() {
                 if (type == C.TYPE_MEDIA_URL) {
                     val episodeInfo = HtmlParser.parseMediaUrl(response = response.string())
                         episodeInfo.vidcdnUrl?.let {
-                            if (C.GOOGLESERVER)
+                            if (PreferenceHelper.sharedPreference.getGoogleServer())
                             {
-                                Timber.e(C.GOOGLESERVER.toString())
                                 compositeDisposable.add(
                                     episodeRepository.fetchGoogleUrl(episodeInfo.vidcdnUrl!!)
                                         .subscribeWith(
@@ -77,7 +76,6 @@ class VideoPlayerViewModel : CommonViewModel() {
                                 )
                             }
                             else {
-                                Timber.e(C.GOOGLESERVER.toString())
                                 compositeDisposable.add(
                                     episodeRepository.fetchM3u8Url(episodeInfo.vidcdnUrl!!)
                                         .subscribeWith(
