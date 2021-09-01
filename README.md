@@ -3,7 +3,7 @@
 <h4 align="center">An Android app to watch anime on your phone without ads.With GoogleServers and Manual Settings Toogles.This is a Fork Of Anime X Stream</h4>
 <p align="center"><a href="https://github.com/Killerpac/AnimeXStream-Re/releases"><img src="/meta/android/download.png"></a></p> 
 <p align="center">
-<a href="https://github.com/Killerpac/AnimeXStream-Re" alt="GitHub release"><img src="https://img.shields.io/badge/version-0.2.4-blue.svg" ></a>
+<a href="https://github.com/Killerpac/AnimeXStream-Re" alt="GitHub release"><img src="https://img.shields.io/badge/version-0.3.0-blue.svg" ></a>
 <a href="/LICENSE" alt="License: GPLv3"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
 <a href="https://github.com/Killerpac/AnimeXStream-Re" alt="Build Status"><img src="https://img.shields.io/badge/build-passing-yellowgreen.svg"></a>
 </p>
