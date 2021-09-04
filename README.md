@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/Killerpac/Kayuri"><img src="/meta/android/kayuri.png" width="150"></a></p> 
+<p align="center"><a href="https://github.com/Killerpac/Kayuri"><img src="/meta/android/kayuri.jpg" width="150"></a></p> 
 <h2 align="center"><b>Kayuri</b></h2>
 <h4 align="center">An Android app to watch anime on your phone without ads.With GoogleServers and Manual Settings Toogles.
 This is a Fork Of Anime X Stream which has been abondoned </h4>
