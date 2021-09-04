@@ -34,7 +34,6 @@ Anime X Stream parses website data and filter required info, thus It removes the
 
 ### Coming Features
 
-* Different list of Popular/ Recent / Movies
 * Online syncing of Favourite list & watched progress (Will require Login)
 * … and many more
 
@@ -50,9 +49,8 @@ Anime X Stream parses website data and filter required info, thus It removes the
 ## Contribution
 Your ideas, translations, design changes, code cleaning, or real heavy code changes or any help is always welcome. The more is contribution the better it gets
 
-[Pull requests](https://github.com/Killerpac/AnimeXStream-Re/pulls) will be reviewed
+[Pull requests](https://github.com/Killerpac/Kayuri/pulls) will be reviewed
 
 #### Known issues and limitations
 - Last Episode Progress not showing when getting back from player.
 - Keyboard not showing sometimes for search
-- No error and loading screen for Home, Search, Favourites Fragment
