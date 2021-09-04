@@ -92,9 +92,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/logo"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:layout_marginTop="30dp"
+                android:layout_width="152dp"
+                android:layout_height="138dp"
                 android:src="@drawable/stream"
                 app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
                 app:layout_constraintStart_toStartOf="@id/guidelineStart"
@@ -122,25 +121,15 @@
                 app:layout_constraintTop_toBottomOf="@id/appName" />
 
             <TextView
-                android:id="@+id/versionCode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/littleDisc"
-                tools:text="V 0.3.0" />
-
-            <TextView
                 android:id="@+id/largeDisc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="@string/large_disc"
                 app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
                 app:layout_constraintStart_toStartOf="@id/guidelineStart"
-                app:layout_constraintTop_toBottomOf="@id/versionCode" />
+                app:layout_constraintTop_toBottomOf="@id/littleDisc" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/nightModeContainer"

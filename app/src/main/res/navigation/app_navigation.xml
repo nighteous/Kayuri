@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="net.xblacky.animexstream.ui.main.home.HomeFragment"
+        android:name="net.sanic.Kayuri.ui.main.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -48,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/animeInfoFragment"
-        android:name="net.xblacky.animexstream.ui.main.animeinfo.AnimeInfoFragment"
+        android:name="net.sanic.Kayuri.ui.main.animeinfo.AnimeInfoFragment"
         android:label="AnimeInfoFragment"
         tools:layout="@layout/fragment_animeinfo">
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <activity
         android:id="@+id/videoPlayerActivity"
-        android:name="net.xblacky.animexstream.ui.main.player.VideoPlayerActivity"
+        android:name="net.sanic.Kayuri.ui.main.player.VideoPlayerActivity"
         android:label="VideoPlayerActivity"
         tools:layout="@layout/activity_video_player">
         <argument
@@ -81,7 +81,7 @@
     </activity>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="net.xblacky.animexstream.ui.main.search.SearchFragment"
+        android:name="net.sanic.Kayuri.ui.main.search.SearchFragment"
         android:label="SearchFragment"
         tools:layout="@layout/fragment_search">
         <action
@@ -94,7 +94,7 @@
     </fragment>
     <fragment
         android:id="@+id/favouriteFragment"
-        android:name="net.xblacky.animexstream.ui.main.favourites.FavouriteFragment"
+        android:name="net.sanic.Kayuri.ui.main.favourites.FavouriteFragment"
         android:label="FavouriteFragment"
         tools:layout="@layout/fragment_favourite">
         <action
@@ -107,6 +107,6 @@
     </fragment>
     <fragment
         android:id="@+id/settings"
-        android:name="net.xblacky.animexstream.ui.main.settings.Settings"
+        android:name="net.sanic.Kayuri.ui.main.settings.Settings"
         android:label="Settings" />
 </navigation>

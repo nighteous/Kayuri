@@ -26,6 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="sans-serif"
+        android:singleLine="true"
+        android:ellipsize="end"
         android:maxWidth="450dp"
         android:maxLines="2"
         android:textColor="@android:color/white"
@@ -158,10 +160,10 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="6dp"
         android:background="?selectableItemBackgroundBorderless"
-        android:tint="@color/media_player_controls"
         android:src="@drawable/exo_controls_fullscreen_enter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/media_player_controls" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="net.xblacky.animexstream">
+    package="net.sanic.Kayuri">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
 
 
     <application
-        android:name=".AnimeXStream"
+        android:name=".Kayuri"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name="net.sanic.Kayuri.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,10 +26,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="net.sanic.Kayuri.MainActivity"
             android:launchMode="singleTask"/>
         <activity
-            android:name=".ui.main.player.VideoPlayerActivity"
+            android:name="net.sanic.Kayuri.ui.main.player.VideoPlayerActivity"
             android:screenOrientation="sensorLandscape"
             android:theme="@style/VideoPlayer"
             android:supportsPictureInPicture="true"

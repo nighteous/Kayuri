@@ -28,13 +28,13 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
     defaultConfig {
-        applicationId "net.xblacky.animexstream"
+        applicationId "net.sanic.Kayuri"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 8
         versionName "0.3.0"
         vectorDrawables.useSupportLibrary = true
-        archivesBaseName = "AnimexStream-v$versionName"
+        archivesBaseName = "Kayuri-v$versionName"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -82,6 +82,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.4.0'
 
     //Card View
     implementation "androidx.cardview:cardview:1.0.0"
