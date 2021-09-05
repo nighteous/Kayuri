@@ -5,5 +5,4 @@
     android:layout_height="match_parent"
     android:name="net.sanic.Kayuri.ui.main.player.VideoPlayerFragment"
     android:id="@+id/playerFragment">
-
 </fragment>

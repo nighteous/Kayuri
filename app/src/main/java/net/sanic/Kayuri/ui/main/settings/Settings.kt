@@ -49,6 +49,11 @@ class Settings : Fragment(), View.OnClickListener {
         rootView.googletoogle.setOnCheckedChangeListener { _, isChecked ->
             sharesPreference.setGoogleServer(isChecked)
         }
+
+        rootView.toogleadvance.isChecked = sharesPreference.getadvancecontrols()
+        rootView.toogleadvance.setOnCheckedChangeListener { _, isChecked ->
+            sharesPreference.setadvancecontrols(isChecked)
+        }
     }
 
     override fun onClick(v: View?) {

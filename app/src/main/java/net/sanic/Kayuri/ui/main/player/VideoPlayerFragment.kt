@@ -42,6 +42,7 @@ import net.sanic.Kayuri.utils.constants.C.Companion.ERROR_CODE_DEFAULT
 import net.sanic.Kayuri.utils.constants.C.Companion.NO_INTERNET_CONNECTION
 import net.sanic.Kayuri.utils.constants.C.Companion.RESPONSE_UNKNOWN
 import net.sanic.Kayuri.utils.model.Content
+import net.sanic.Kayuri.utils.preference.PreferenceHelper
 import timber.log.Timber
 import java.io.IOException
 import java.net.URLDecoder
@@ -88,6 +89,7 @@ class VideoPlayerFragment : Fragment(), View.OnClickListener, Player.EventListen
         setClickListeners()
         initializeAudioManager()
         initializePlayer()
+        setOnTouchListeners()
         retainInstance = true
         return rootView
     }
@@ -134,6 +136,14 @@ class VideoPlayerFragment : Fragment(), View.OnClickListener, Player.EventListen
         rootView.previousEpisode.setOnClickListener(this)
     }
 
+    private fun setOnTouchListeners(){
+        if(PreferenceHelper.sharedPreference.getadvancecontrols()) {
+            rootView.scrollayout.setOnTouchListener(object : OnSwipeTouchListener(this.activity) {
+                override fun onSwipeLeft() {}
+                override fun onSwipeRight() {}
+            })
+        }
+    }
     private fun buildMediaSource(uri: Uri): MediaSource {
 
         val sergeant = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36"
@@ -352,7 +362,7 @@ class VideoPlayerFragment : Fragment(), View.OnClickListener, Player.EventListen
 
     // set playback speed for exoplayer
     private fun setPlaybackSpeed(speed: Float) {
-        val params: PlaybackParameters = PlaybackParameters(speed)
+        val params = PlaybackParameters(speed)
         player.playbackParameters = params
     }
 

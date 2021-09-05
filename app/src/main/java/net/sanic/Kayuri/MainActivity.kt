@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     fun toggleDayNight() {
         if (PreferenceHelper.sharedPreference.getNightMode()) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             if (Build.VERSION.SDK_INT >= VERSION_CODES.M) {

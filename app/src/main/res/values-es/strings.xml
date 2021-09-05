@@ -32,4 +32,6 @@
     <string name="toggle_pip_mode">Alternar modo PIP</string>
     <string name="Google_Server">Servidor de Google</string>
     <string name="Toogle_Google_Server">¡Solo 1080p! Velocidades más rápidas</string>
+    <string name="controlsname">Controles del jugador</string>
+    <string name="controlstext">Controles deslizantes para volumen y brillo en el reproductor</string>
 </resources>

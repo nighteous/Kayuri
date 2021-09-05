@@ -13,6 +13,7 @@ class Preference(private val context: Context) {
     private val PIP = "PIP"
     private val PRIVATE_MODE = 0
     private val GOOGLESERVER = "GOOGLESERVER"
+    private val ADVANCECONTROLS = "ADVANCECONTROLS"
     private var sharedPreferences: SharedPreferences
 
     init {
@@ -48,6 +49,17 @@ class Preference(private val context: Context) {
         editor.putBoolean(GOOGLESERVER, gogo)
         editor.apply()
     }
+
+    fun getadvancecontrols():Boolean {
+        return  sharedPreferences.getBoolean(ADVANCECONTROLS,false)
+    }
+
+    fun setadvancecontrols(controls:Boolean){
+        val editor = sharedPreferences.edit()
+        editor.putBoolean(ADVANCECONTROLS,controls)
+        editor.apply()
+    }
+
     fun getBaseUrl(): String {
         return sharedPreferences.getString(BASE_URL, C.BASE_URL) ?: C.BASE_URL
     }

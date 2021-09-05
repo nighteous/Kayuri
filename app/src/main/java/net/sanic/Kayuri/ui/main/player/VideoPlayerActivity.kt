@@ -9,6 +9,8 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.WindowInsets
+import android.view.WindowInsetsController
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,7 +21,6 @@ import net.sanic.Kayuri.utils.model.Content
 import net.sanic.Kayuri.utils.preference.Preference
 import net.sanic.Kayuri.utils.preference.PreferenceHelper
 import timber.log.Timber
-import java.lang.Exception
 
 class VideoPlayerActivity : AppCompatActivity(), VideoPlayerListener {
 
@@ -40,6 +41,8 @@ class VideoPlayerActivity : AppCompatActivity(), VideoPlayerListener {
         setObserver()
         goFullScreen()
     }
+
+
 
     override fun onNewIntent(intent: Intent?) {
         (playerFragment as VideoPlayerFragment).playOrPausePlayer(
@@ -80,7 +83,7 @@ class VideoPlayerActivity : AppCompatActivity(), VideoPlayerListener {
         viewModel.fetchEpisodeMediaUrl()
     }
 
-    @Suppress("DEPRECATION")
+
     private fun enterPipMode() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
             && packageManager
@@ -206,9 +209,20 @@ class VideoPlayerActivity : AppCompatActivity(), VideoPlayerListener {
     }
 
     private fun goFullScreen() {
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_FULLSCREEN)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(false)
+            val controller = window.insetsController
+            if (controller != null) {
+                controller.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+                controller.systemBarsBehavior = WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            }
+        }
+        else {
+                window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_FULLSCREEN)
+            }
     }
 
     override fun updateWatchedValue(content: Content) {

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollayout"
     android:background="@color/media_player_controls_background">
 
     <ImageView
@@ -209,7 +210,5 @@
         android:id="@+id/nextEpisode"
         app:layout_constraintBottom_toTopOf="@id/exo_duration"
         />
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

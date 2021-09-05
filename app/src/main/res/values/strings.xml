@@ -34,5 +34,7 @@
     <string name="toggle_pip_mode">Toggle PIP Mode</string>
     <string name="Google_Server">Google Server</string>
     <string name="Toogle_Google_Server">1080p only! Faster Speeds</string>
+    <string name="controlsname">Player Controls</string>
+    <string name="controlstext">Slide Contols For Volume And Brightness in Player</string>
 
 </resources>
