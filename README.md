@@ -1,10 +1,10 @@
-<p align="center"><a href="https://github.com/Killerpac/Kayuri"><img src="/meta/android/kayuri.png" width="150"></a></p> 
+<p align="center"><a href="https://github.com/Killerpac/Kayuri"><img src="/meta/android/kayuri.jpg" width="150"></a></p> 
 <h2 align="center"><b>Kayuri</b></h2>
 <h4 align="center">An Android app to watch anime on your phone without ads.With GoogleServers and Manual Settings Toogles.
-This is a Fork Of Anime X Stream which has been abondoned </h4>
+This is a Fork Of Anime X Stream which was abondoned but continued here</h4>
 <p align="center"><a href="https://github.com/Killerpac/AnimeXStream-Re/releases"><img src="/meta/android/download.png"></a></p> 
 <p align="center">
-<a href="https://github.com/Killerpac/Kayuri" alt="GitHub release"><img src="https://img.shields.io/badge/version-0.3.0-blue.svg" ></a>
+<a href="https://github.com/Killerpac/Kayuri" alt="GitHub release"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" ></a>
 <a href="/LICENSE" alt="License: GPLv3"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
 <a href="https://github.com/Killerpac/AnimeXStream-Re" alt="Build Status"><img src="https://img.shields.io/badge/build-passing-yellowgreen.svg"></a>
 </p>
@@ -34,7 +34,6 @@ Anime X Stream parses website data and filter required info, thus It removes the
 
 ### Coming Features
 
-* Different list of Popular/ Recent / Movies
 * Online syncing of Favourite list & watched progress (Will require Login)
 * … and many more
 
@@ -50,9 +49,8 @@ Anime X Stream parses website data and filter required info, thus It removes the
 ## Contribution
 Your ideas, translations, design changes, code cleaning, or real heavy code changes or any help is always welcome. The more is contribution the better it gets
 
-[Pull requests](https://github.com/Killerpac/AnimeXStream-Re/pulls) will be reviewed
+[Pull requests](https://github.com/Killerpac/Kayuri/pulls) will be reviewed
 
 #### Known issues and limitations
 - Last Episode Progress not showing when getting back from player.
 - Keyboard not showing sometimes for search
-- No error and loading screen for Home, Search, Favourites Fragment
