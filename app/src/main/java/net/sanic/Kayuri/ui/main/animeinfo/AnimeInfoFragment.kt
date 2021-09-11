@@ -1,6 +1,7 @@
 package net.sanic.Kayuri.ui.main.animeinfo
 
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +23,6 @@ import net.sanic.Kayuri.utils.ItemOffsetDecoration
 import net.sanic.Kayuri.utils.Tags.GenreTags
 import net.sanic.Kayuri.utils.Utils
 import net.sanic.Kayuri.utils.model.AnimeInfoModel
-
 class AnimeInfoFragment : Fragment() {
 
     private lateinit var rootView: View
@@ -127,15 +127,18 @@ class AnimeInfoFragment : Fragment() {
 
                 override fun onTransitionStarted(p0: MotionLayout?, p1: Int, p2: Int) {
                     rootView.topView.cardElevation = 0F
+                    rootView.animeInfoSummary.elevation = 0F
                 }
 
                 override fun onTransitionChange(p0: MotionLayout?, startId: Int, endId: Int, progress: Float) {
                     if(startId == R.id.start){
                         rootView.topView.cardElevation = 20F * progress
+                        rootView.animeInfoSummary.elevation = 20F * progress
                         rootView.toolbarText.alpha = progress
                     }
                     else{
                         rootView.topView.cardElevation = 10F * (1 - progress)
+                        rootView.animeInfoSummary.elevation = 10F * (1 - progress)
                         rootView.toolbarText.alpha = (1-progress)
                     }
                 }
@@ -146,11 +149,15 @@ class AnimeInfoFragment : Fragment() {
             }
         )
     }
-
     private fun setOnClickListeners(){
         rootView.favourite.setOnClickListener {
             onFavouriteClick()
         }
+        rootView.animeInfoSummary.setOnClickListener{
+                animeInfoSummary.maxLines = 10
+                animeInfoSummary.movementMethod = ScrollingMovementMethod()
+        }
+
 
         rootView.back.setOnClickListener {
             findNavController().popBackStack()

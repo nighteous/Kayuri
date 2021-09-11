@@ -77,10 +77,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@android:color/white">
-
-
-        </Constraint>
+            android:background="@android:color/white"/>
 
         <Constraint
             android:id="@+id/animeInfoRoot"
@@ -107,6 +104,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/topView"
             android:background="@drawable/shadow_backgorund"
+            android:visibility="invisible"
             />
 <!--        <Constraint-->
 <!--            android:id="@id/loading"-->

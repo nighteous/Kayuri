@@ -1,9 +1,6 @@
 package net.sanic.Kayuri
 
-import android.os.Build
-import android.os.Build.VERSION_CODES
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import net.sanic.Kayuri.utils.preference.PreferenceHelper
@@ -37,20 +34,20 @@ class MainActivity : AppCompatActivity() {
 //    }
 
     fun toggleDayNight() {
-        if (PreferenceHelper.sharedPreference.getNightMode()) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            if (PreferenceHelper.sharedPreference.getNightMode()) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
 
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            if (Build.VERSION.SDK_INT >= VERSION_CODES.M) {
-                val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
-                } else {
-                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-                }
-                window.decorView.systemUiVisibility = flags
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                val flags = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+//                } else {
+//                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+//                }
+//                window.decorView.systemUiVisibility = flags
+//            }
             }
-        }
     }
 
 }

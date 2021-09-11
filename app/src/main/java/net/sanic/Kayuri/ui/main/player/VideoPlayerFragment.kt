@@ -155,7 +155,7 @@ class VideoPlayerFragment : Fragment(), View.OnClickListener, Player.EventListen
                 HlsDataSourceFactory {
                     val dataSource: HttpDataSource =
                         DefaultHttpDataSource(sergeant)
-                    dataSource.setRequestProperty("Referer", "https://vidstreaming.io")
+                    dataSource.setRequestProperty("Referer", "https://streamani.io/")
                     dataSource
                 })
                 .setAllowChunklessPreparation(true)

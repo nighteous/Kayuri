@@ -194,6 +194,30 @@ class HtmlParser {
 
         }
 
+        fun parsegoogleurl(response: String): String?{
+            var m3u8Url: String?= ""
+            val document = Jsoup.parse(response)
+            val info = document?.getElementsByClass("mirror_link")
+            val pattern = Pattern.compile(C.M3U8_REGEX_PATTERN)
+            val matcher = pattern.matcher(info.toString())
+            return try{
+                while (matcher.find()){
+                  if (matcher.group(0)!!.contains("mp4")) {
+                       m3u8Url = matcher.group(0)
+//                        if( matcher.group(0)!!.contains("storage.googleapis.com"))
+//                        {
+//                            m3u8Url = matcher.group(0)?.replace("storage.googleapis.com","")
+                      }
+
+                    break
+                }
+                m3u8Url
+            } catch (npe:NullPointerException){
+                m3u8Url
+            }
+
+        }
+
         fun fetchEpisodeList(response: String): ArrayList<EpisodeModel>{
             val episodeList = ArrayList<EpisodeModel>()
             val document = Jsoup.parse(response)

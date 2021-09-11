@@ -10,6 +10,7 @@ import net.sanic.Kayuri.utils.model.Content
 import net.sanic.Kayuri.utils.parser.HtmlParser
 import net.sanic.Kayuri.utils.preference.PreferenceHelper
 import okhttp3.ResponseBody
+import timber.log.Timber
 
 class VideoPlayerViewModel : CommonViewModel() {
 
@@ -69,7 +70,7 @@ class VideoPlayerViewModel : CommonViewModel() {
                             if (PreferenceHelper.sharedPreference.getGoogleServer())
                             {
                                 compositeDisposable.add(
-                                    episodeRepository.fetchGoogleUrl(episodeInfo.vidcdnUrl!!)
+                                    episodeRepository.fetchGoogleUrl(episodeInfo.vidcdnUrl!!.replace("embedplus","download"))
                                         .subscribeWith(
                                             getEpisodeUrlObserver(C.TYPE_M3U8_URL)
                                         )
@@ -90,7 +91,17 @@ class VideoPlayerViewModel : CommonViewModel() {
                     _content.value?.previousEpisodeUrl = episodeInfo.previousEpisodeUrl
                     _content.value?.nextEpisodeUrl = episodeInfo.nextEpisodeUrl
                 } else if (type == C.TYPE_M3U8_URL) {
-                    val m3u8Url = HtmlParser.parseM3U8Url(response = response.string())
+                    var m3u8Url:String? = ""
+                    if (PreferenceHelper.sharedPreference.getGoogleServer())
+                    {
+                        m3u8Url = HtmlParser.parsegoogleurl(response = response.string())
+                        Timber.e(m3u8Url)
+                    }
+                    else
+                    {
+                        m3u8Url = HtmlParser.parseM3U8Url(response = response.string())
+                        Timber.e(m3u8Url)
+                    }
                     val content = _content.value
                     content?.url = m3u8Url
                     _content.value = content

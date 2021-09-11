@@ -3,7 +3,8 @@ package net.sanic.Kayuri.ui.main.search
 import android.content.Context
 import android.content.res.Configuration
 import android.net.ConnectivityManager
-import android.net.NetworkInfo
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -74,9 +75,9 @@ class SearchFragment : Fragment(), View.OnClickListener,
 
     private fun setAdapters() {
         searchController = SearchController(this)
-        searchController.spanCount = Utils.calculateNoOfColumns(context!!, 150f)
+        searchController.spanCount = Utils.calculateNoOfColumns(requireContext(), 150f)
         rootView.searchRecyclerView.apply {
-            layoutManager = GridLayoutManager(context, Utils.calculateNoOfColumns(context!!, 150f))
+            layoutManager = GridLayoutManager(context, Utils.calculateNoOfColumns(requireContext(), 150f))
             adapter = searchController.adapter
             (layoutManager as GridLayoutManager).spanSizeLookup = searchController.spanSizeLookup
         }
@@ -206,11 +207,22 @@ class SearchFragment : Fragment(), View.OnClickListener,
     }
 
     private fun isNetworkAvailable(): Boolean {
-        val connectivityManager = activity?.getSystemService(Context.CONNECTIVITY_SERVICE)
-        return if (connectivityManager is ConnectivityManager) {
-            val networkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
-            networkInfo?.isConnected ?: false
-        } else false
+        val connectivityManager = activity?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val nw = connectivityManager.activeNetwork ?: return false
+            val actNw = connectivityManager.getNetworkCapabilities(nw) ?: return false
+            return when {
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                //for other device how are able to connect with Ethernet
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+                //for check internet over Bluetooth
+                actNw.hasTransport(NetworkCapabilities.TRANSPORT_BLUETOOTH) -> true
+                else -> false
+            }
+        } else {
+            return connectivityManager.activeNetworkInfo?.isConnected ?: false
+        }
     }
 
 }
