@@ -4,7 +4,7 @@
 This is a Fork Of Anime X Stream which was abondoned but continued here</h4>
 <p align="center"><a href="https://github.com/Killerpac/AnimeXStream-Re/releases"><img src="/meta/android/download.png"></a></p> 
 <p align="center">
-<a href="https://github.com/Killerpac/Kayuri" alt="GitHub release"><img src="https://img.shields.io/badge/version-1.0.0-blue.svg" ></a>
+<a href="https://github.com/Killerpac/Kayuri" alt="GitHub release"><img src="https://img.shields.io/badge/version-1.2.0-blue.svg" ></a>
 <a href="/LICENSE" alt="License: GPLv3"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
 <a href="https://github.com/Killerpac/AnimeXStream-Re" alt="Build Status"><img src="https://img.shields.io/badge/build-passing-yellowgreen.svg"></a>
 </p>
