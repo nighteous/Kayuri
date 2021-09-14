@@ -19,7 +19,7 @@ This is a Fork Of Anime X Stream which was abondoned but continued here</h4>
 
 Kayuri parses website data and filter required info, thus It removes the ads for seamless experience. The app doesn't require account creation to use it.
 
-##VirusTotal Report
+## VirusTotal Report
 
 https://www.virustotal.com/gui/file/a12680c29712479e2c90a16ad234b4d15741f09289a17b916382c06109666bbf/summary
 
