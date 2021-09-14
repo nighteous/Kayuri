@@ -2,7 +2,7 @@
 <h2 align="center"><b>Kayuri</b></h2>
 <h4 align="center">An Android app to watch anime on your phone without ads.With GoogleServers and Manual Settings Toogles.
 This is a Fork Of Anime X Stream which was abondoned but continued here</h4>
-<p align="center"><a href="https://github.com/Killerpac/AnimeXStream-Re/releases"><img src="/meta/android/download.png"></a></p> 
+<p align="center"><a href="https://github.com/Killerpac/Kayuri/releases"><img src="/meta/android/download.png"></a></p> 
 <p align="center">
 <a href="https://github.com/Killerpac/Kayuri" alt="GitHub release"><img src="https://img.shields.io/badge/version-1.2.0-blue.svg" ></a>
 <a href="/LICENSE" alt="License: GPLv3"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
@@ -17,7 +17,11 @@ This is a Fork Of Anime X Stream which was abondoned but continued here</h4>
 
 ## Description
 
-Anime X Stream parses website data and filter required info, thus It removes the ads for seamless experience. The app doesn't require account creation to use it.
+Kayuri parses website data and filter required info, thus It removes the ads for seamless experience. The app doesn't require account creation to use it.
+
+##VirusTotal Report
+
+https://www.virustotal.com/gui/file/a12680c29712479e2c90a16ad234b4d15741f09289a17b916382c06109666bbf/summary
 
 ### Features
 
