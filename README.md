@@ -4,9 +4,10 @@
 This is a Fork Of Anime X Stream which was abondoned but continued here</h4>
 <p align="center"><a href="https://github.com/Killerpac/Kayuri/releases"><img src="/meta/android/download.png"></a></p> 
 <p align="center">
-<a href="https://github.com/Killerpac/Kayuri" alt="GitHub release"><img src="https://img.shields.io/badge/version-1.3.0-blue.svg" ></a>
-<a href="/LICENSE" alt="License: GPLv3"><img src="https://img.shields.io/badge/License-MIT-orange.svg"></a>
-<a href="https://github.com/Killerpac/AnimeXStream-Re" alt="Build Status"><img src="https://img.shields.io/badge/build-passing-green.svg"></a>
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/killerpac/kayuri?style=for-the-badge">
+<img alt="GitHub" src="https://img.shields.io/github/license/Killerpac/kayuri?color=orange&style=for-the-badge">
+<a href="https://github.com/Killerpac/AnimeXStream-Re" alt="Build Status"><img src="https://img.shields.io/badge/build-passing-green.svg?style=for-the-badge&color=green"></a>
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/killerpac/Kayuri/total?style=for-the-badge">
 </p>
 <hr>
 <b>WARNING: THIS IS A BETA VERSION of application, THEREFORE YOU MAY ENCOUNTER BUGS. You can OPEN the ISSUE on GITHUB REPOSITORY.</b>
@@ -56,7 +57,8 @@ Your ideas, translations, design changes, code cleaning, or real heavy code chan
 [Pull requests](https://github.com/Killerpac/Kayuri/pulls) will be reviewed
 
 #### Known issues and limitations
-- Keyboard not showing sometimes for search
+- Links For Some Old Anime Are Not Found
+- Preferred Quality not working for all Anime
 
 ### Credits
 Anime X Stream For The Heart Of the Code 
